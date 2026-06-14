@@ -252,7 +252,7 @@ button {
 }
 @media (min-width: 1158px) and (max-width: 1440px) {
   .header {
-    padding-top: 7rem;
+    padding-top: 3rem;
   }
   .header_container {
     -webkit-box-pack: start;
@@ -692,7 +692,7 @@ button {
             box-shadow: 0px 2px 20px #a86904;
   }
 }
-@media screen and (min-width: 1200px) and (max-width: 1440px) {
+@media (min-width: 1200px) and (max-width: 1440px) {
   .navigation {
     position: fixed;
     top: 0;
