@@ -1,6 +1,7 @@
 @use "../variables/index" as *;
 
 .section_container {
+  width: 100%;
   max-width: $max-width;
   margin: 0 auto;
   padding: 3rem 1rem;
@@ -32,5 +33,19 @@
 
   .section_container :is(.section_header) {
     margin: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .section_container {
+    max-width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section_container {
+    max-width: 1400px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
