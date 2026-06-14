@@ -5,6 +5,7 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -37,8 +38,7 @@ button {
   scroll-margin-top: 120px;
 }
 
-
-.container {
+.section_container {
   max-width: 320px;
   padding-left: 16px;
   padding-right: 16px;
@@ -47,14 +47,14 @@ button {
 }
 
 @media screen and (min-width: 768px) {
-  .container {
+  .section_container {
     max-width: 768px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .container {
-    max-width: 1400px;
+  .section_container {
+    max-width: 1200px;
     padding-left: 15px;
     padding-right: 15px;
   }
