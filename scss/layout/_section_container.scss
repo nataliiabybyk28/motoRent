@@ -1,0 +1,36 @@
+@use "../variables/index" as *;
+
+.section_container {
+  max-width: $max-width;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+}
+
+.section_subheader {
+  max-width: 800px;
+  margin-inline: auto;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: $white;
+  letter-spacing: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+}
+
+@media screen and (min-width: 1200px) {
+  .span_golden {
+    display: block;
+    position: relative;
+    left: 140px;
+  }
+
+  .section_container :is(.section_header, .section_subheader) {
+    text-align: left;
+  }
+
+  .section_container :is(.section_header) {
+    margin: 0;
+  }
+}

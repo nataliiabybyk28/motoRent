@@ -1,0 +1,22 @@
+@use "../variables/index" as *;
+@use "../base/index" as *;
+
+.section_backgraund {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  width: 100%;
+  max-width: $max-width;
+  display: flex;
+  justify-content: space-between;
+  z-index: -99;
+}
+
+.section_backgraund span {
+  width: 2px;
+  height: 100%;
+  background-color: $text-light;
+  opacity: 0.1;
+}

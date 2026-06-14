@@ -1,0 +1,29 @@
+@use "../../variables/index" as *;
+@use "../../base/index" as *;
+
+.header_third {
+  min-height: 80vh;
+  position: relative;
+  isolation: isolate;
+  background: url(../../../images/images-moto/6.png) center / cover no-repeat
+    fixed;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.header_third::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(
+    to bottom,
+    $background-color,
+    rgba(0, 0, 0, 0.5),
+    $background-color
+  );
+  z-index: -1;
+}

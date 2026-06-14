@@ -1,0 +1,135 @@
+@use "../../variables/index" as *;
+@use "../../base/index" as *;
+@use "../../layout/index.scss" as *;
+
+.about_container {
+  max-width: 90vw;
+  position: relative;
+  overflow: hidden;
+  background: $background-color;
+}
+
+.about_container::before {
+  content: "";
+  position: absolute;
+  inset: -200px;
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(168, 105, 4, 0.25),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 80% 40%,
+      rgba(255, 255, 255, 0.08),
+      transparent 45%
+    ),
+    radial-gradient(circle at 40% 80%, rgba(168, 105, 4, 0.15), transparent 50%);
+
+  filter: blur(60px);
+  z-index: 0;
+}
+
+.about_grid {
+  display: grid;
+  gap: 2rem 1rem;
+  display: grid;
+  position: relative;
+}
+
+.about_card {
+  position: relative;
+  max-width: 400px;
+  margin-inline: auto;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 2rem;
+  background: $background-second;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(168, 105, 4, 0.3);
+  color: #fff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.about_card:hover {
+  box-shadow: 0px 2px 20px rgba(70, 36, 2, 0.747);
+  border-color: rgba(168, 105, 4, 0.7);
+  transform: translateY(-14px) scale(1.03);
+}
+
+.about_card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(107, 75, 1, 0.777),
+    transparent
+  );
+  transform: skewX(-20deg);
+  animation: shine 4s ease infinite;
+}
+
+.about_card:hover::before {
+  animation: none;
+}
+
+@keyframes shine {
+  from {
+    left: -100%;
+  }
+  to {
+    left: 150%;
+  }
+}
+
+.about_card span {
+  display: inline-block;
+  color: $golden;
+  background-color: #f3f4f6;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  padding: 16px 20px;
+  border-radius: 1.25rem;
+  background: rgb(231, 221, 221);
+  backdrop-filter: blur(10px);
+}
+
+.about_card h4 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: $extra-light;
+}
+
+.about_card p {
+  line-height: 1.5rem;
+}
+
+@media screen and (min-width: 748px) {
+  .about_grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .about_container {
+    padding-top: 2rem;
+  }
+
+  .about_container .section_container span {
+    text-align: end;
+  }
+
+  .about_grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

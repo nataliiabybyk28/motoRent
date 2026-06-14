@@ -1,0 +1,76 @@
+@use "../../variables/index" as *;
+@use "../..//base/index" as *;
+
+.header {
+  min-height: 100vh;
+  position: relative;
+  background: url(../../../images/images-moto/12.png) center / cover no-repeat
+    fixed;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+.header::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(
+    to bottom,
+    $background-color,
+    rgba(0, 0, 0, 0.1),
+    $background-color
+  );
+  z-index: -1;
+}
+
+.header_container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section_header {
+  max-width: 800px;
+  margin-inline: auto;
+  font-size: 2rem;
+  color: $white;
+  font-family: $font-heading;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+}
+
+@media screen and (min-width: 748px) {
+  .header {
+    padding-top: 7rem;
+  }
+
+  .section_header {
+    max-width: 910px;
+    font-size: 3rem;
+  }
+
+  .header_container .section_header {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header_container {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .header_container .section_header {
+    margin: 0;
+    text-align: left;
+    font-size: 6rem;
+  }
+}

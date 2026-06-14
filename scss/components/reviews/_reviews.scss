@@ -1,0 +1,138 @@
+@use "../../variables/index" as *;
+@use "../../base/index" as *;
+
+.reviews_grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  padding: 90px 0;
+}
+
+.hex {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  margin: -55px 0;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+.hex img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.hex:hover {
+  z-index: 10;
+  transform: scale(1.05);
+}
+
+.hex:hover img {
+  transform: scale(1.15);
+}
+
+.content {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(6px);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  opacity: 0;
+  transform: translateY(15px);
+  transition: 0.4s ease;
+}
+
+.hex:hover .content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stars {
+  color: gold;
+  margin-bottom: 10px;
+  display: flex;
+  gap: 4px;
+}
+
+@media (max-width: 1200px) {
+  .hex {
+    width: 320px;
+    height: 320px;
+    margin: -45px 0;
+  }
+
+  .hex:nth-child(odd) {
+    margin-left: 160px;
+  }
+}
+
+@media (max-width: 748px) {
+  .reviews_grid {
+    margin-left: 0;
+  }
+  .hex {
+    width: 260px;
+    height: 260px;
+    margin: 0 0;
+  }
+
+  .hex:nth-child(odd) {
+    margin-left: 130px;
+  }
+}
+
+@media (max-width: 600px) {
+  // .hex {
+  //   width: 200px;
+  //   height: 200px;
+  //   margin: -30px auto;
+  // }
+
+  // .hex:nth-child(odd) {
+  //   margin-left: 100px;
+  // }
+}
+
+@media (max-width: 400px) {
+  .reviews_grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin: 0 auto;
+  }
+
+  // .reviews_grid {
+  //   display: flex;
+  //   flex-wrap: wrap;
+  //   justify-content: center;
+  //   // width: 100%;
+  //   // max-width: 100%;
+  //   gap: 1rem;
+  //   width: 100vw;
+  //   margin-left: calc(50% - 20vw);
+  //   padding: 90px 0;
+  // }
+
+  .hex {
+    width: 90vw;
+    height: 260px;
+    margin: 0 auto;
+  }
+
+  .hex:nth-child(odd) {
+    margin-left: 0;
+  }
+}

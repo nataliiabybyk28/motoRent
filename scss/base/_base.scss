@@ -1,0 +1,38 @@
+// _base.scss - общие стили для элементов (body, a, p и т.д.)
+@use "../variables/index" as *;
+@use "./typography" as *;
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  background-color: $background-color;
+  font-family: $font-body;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+a {
+  transition: all 0.3s ease;
+}
+
+button {
+  cursor: pointer;
+}
+
+#about,
+#deals,
+#reviews,
+#contact,
+#follow {
+  scroll-margin-top: 120px;
+}

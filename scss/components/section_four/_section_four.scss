@@ -1,0 +1,139 @@
+@use "../../variables/index" as *;
+@use "../../base/index" as *;
+
+.header_four {
+  min-height: 80vh;
+  position: relative;
+  isolation: isolate;
+  background: url(../../../images/images-moto/29.png) center / cover no-repeat
+    fixed;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 6rem;
+}
+
+.header_four::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(
+    to bottom,
+    $background-color,
+    rgba(0, 0, 0, 0.5),
+    $background-color
+  );
+  z-index: -1;
+}
+
+.newsletter {
+  max-width: 650px;
+  margin: 3rem auto 0;
+  text-align: center;
+  padding: 0 1rem;
+
+  h4 {
+    margin-bottom: 1.5rem;
+    color: $white;
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+  }
+}
+
+.newsletter_form {
+  display: flex;
+  align-items: center;
+
+  max-width: 600px;
+  margin: 0 auto;
+
+  padding: 0.5rem;
+
+  border-radius: 100px;
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+
+  border: 1px solid rgba(168, 105, 4, 0.4);
+
+  box-shadow: 0 0 30px rgba(168, 105, 4, 0.2);
+}
+
+.newsletter_form input {
+  flex: 1;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  padding: 1rem 1.5rem;
+
+  color: $white;
+  font-size: 1rem;
+}
+
+.newsletter_form input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.newsletter_form button {
+  width: 60px;
+  height: 60px;
+
+  border: none;
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  color: $white;
+  font-size: 1.3rem;
+
+  background: linear-gradient(135deg, $golden, darkgoldenrod);
+
+  transition: all 0.3s ease;
+}
+
+.newsletter_form button:hover {
+  transform: scale(1.08);
+
+  box-shadow: 0 0 20px rgba(168, 105, 4, 0.7);
+}
+
+@media screen and (max-width: 600px) {
+  .newsletter_form {
+    flex-direction: column;
+    gap: 1rem;
+
+    border-radius: 2rem;
+  }
+
+  .newsletter_form button {
+    width: 100%;
+    border-radius: 1rem;
+  }
+}
+
+@media screen and (min-width: 748px) {
+  .banner-title .text-special {
+    position: absolute;
+    font-size: 25rem;
+    top: 0;
+    left: -80px;
+    // transform: translate(-10%, -10%);
+    opacity: 0.5;
+    animation: animate 10s linear infinite;
+  }
+
+  @keyframes animate {
+    0% {
+      transform: translate(-50%, -50%) rotateY(0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotateY(360deg);
+    }
+  }
+}

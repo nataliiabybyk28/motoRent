@@ -1,0 +1,41 @@
+@use "../../variables/index" as *;
+@use "../../base/index" as *;
+
+.Banner {
+  min-height: 80vh;
+  position: relative;
+  isolation: isolate;
+  background: url(../../../images/images-moto/19.png) center / cover no-repeat
+    fixed;
+}
+
+.Banner::before {
+  position: absolute;
+  content: "";
+  height: 50%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(
+    to bottom,
+    $background-color,
+    rgba(0, 0, 0, 0)
+  );
+  z-index: -1;
+}
+
+@media screen and (min-width: 1200px) {
+  .banner_container {
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .Banner .banner_container .section_header {
+    margin: 0;
+    padding-top: 100px;
+    text-align: left;
+    font-size: 5rem;
+    justify-content: center;
+    align-items: center;
+  }
+}
