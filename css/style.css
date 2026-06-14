@@ -638,7 +638,7 @@ button {
     background-color: rgba(255, 255, 255, 0.0509803922);
   }
   .nav_header {
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -702,7 +702,7 @@ button {
     background-color: rgba(255, 255, 255, 0.0509803922);
   }
   .nav_header {
-    max-width: 1400px;
+    max-width: 1200px;
     margin: 0 auto;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -758,7 +758,7 @@ button {
 }
 .section_container {
   width: 100%;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 3rem 1rem;
 }
@@ -809,7 +809,7 @@ button {
           transform: translateX(-50%);
   height: 100%;
   width: 100%;
-  max-width: 1400px;
+  max-width: 1200px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
