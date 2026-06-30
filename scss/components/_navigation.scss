@@ -1,0 +1,161 @@
+@use "../variables/index" as *;
+@use "../base/index" as *;
+
+.navigation {
+  width: 260px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  background: $backgraund-glass-dark;
+  backdrop-filter: blur(15px);
+  border-right: $border-outside;
+  z-index: 9999;
+
+  &__header {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem 1.5rem;
+  }
+
+  &__logo {
+    text-align: center;
+
+    a img {
+      width: 100%;
+      max-width: 180px;
+    }
+  }
+  /* HIDDEN CHECKBOX */
+  #menu-toggle-2 {
+    display: none;
+  }
+
+  &__menu_btn {
+    display: none;
+    font-size: 1.5rem;
+    color: $color-button-mobile;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    margin: 3rem 0 auto;
+    padding: 0;
+
+    li {
+      width: 100%;
+    }
+
+    a {
+      display: block;
+      padding: 1rem 1.2rem;
+      color: $text-main;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-size: 0.85rem;
+      border-radius: $border-radius-md;
+      border: 1px solid transparent;
+      transition: $transition-duration;
+      &:hover {
+        color: $gold-bright;
+        background: $background-button;
+      }
+    }
+  }
+
+  @include tablet {
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    border-right: none;
+    border-bottom: $border-outside;
+
+    &__header {
+      height: auto;
+      width: 100%;
+      padding: 1rem 2rem;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__links {
+      flex-direction: row;
+      align-items: center;
+      gap: 0.5rem;
+      margin: 0;
+
+      li {
+        width: auto;
+      }
+
+      a {
+        padding: 0.6rem 1rem;
+        font-size: 0.75rem;
+        letter-spacing: 0;
+        &:hover {
+          background: transparent;
+        }
+      }
+
+      &__logo img {
+        max-width: 130px;
+      }
+    }
+  }
+
+  @include mobile {
+    &__menu_btn {
+      display: block;
+      cursor: pointer;
+      font-size: 1.5rem;
+      z-index: 10001;
+    }
+    &__links {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 0.7rem;
+      background: $background-color;
+      transform: translateY(100%);
+      opacity: 0;
+      visibility: hidden;
+      transition: $transition-duration;
+      z-index: 10000;
+
+      li {
+        width: auto;
+      }
+
+      a {
+        display: block;
+        width: 100%;
+        font-size: 1.2rem;
+        letter-spacing: 2px;
+        padding: 1rem 2rem;
+        text-align: center;
+        border-radius: $border-radius-md;
+        border: 1px solid transparent;
+        transition: $transition-duration;
+      }
+    }
+  }
+  #menu-toggle-2:checked ~ .navigation__links {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+  }
+}

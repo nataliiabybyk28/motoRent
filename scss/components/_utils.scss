@@ -1,12 +1,19 @@
 @use "../variables/index" as *;
 @use "../base/index" as *;
 
-.section_container {
+.container {
   width: 100%;
   max-width: $max-width;
   margin: 0 auto;
   padding: 0rem 1.2rem 0rem;
 }
+
+// .hidden-mobile {
+//   @include mobile {
+//     display: none;
+//   }
+// }
+
 .section_header {
   max-width: 1000px;
   padding: 0.5rem;
@@ -25,7 +32,7 @@
   padding: 0.5rem;
   font-size: 1rem;
   font-weight: 600;
-  color: $white;
+  color: $text-main;
   letter-spacing: 5px;
   text-align: left;
   text-transform: uppercase;
@@ -51,5 +58,16 @@
 
     white-space: nowrap;
     pointer-events: none;
+  }
+}
+
+.main-content {
+  margin-left: 260px;
+  min-height: 100vh;
+  // display: flex;
+  // flex-direction: column;
+  @include tablet {
+    margin-left: 0;
+    margin-top: 90px;
   }
 }

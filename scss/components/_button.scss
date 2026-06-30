@@ -1,0 +1,21 @@
+@use "../variables/index" as *;
+@use "../base/index" as *;
+
+.btn {
+  display: block;
+  padding: 1rem 1.2rem;
+  color: $text-main;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  outline: none;
+  border-radius: $border-radius-md;
+  border: 1px solid transparent;
+  text-align: center;
+  background: $background-button;
+  transition: $transition-duration;
+
+  &:hover {
+    color: $gold-bright;
+  }
+}

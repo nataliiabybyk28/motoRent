@@ -29,29 +29,16 @@
 
   <body>
 
-    <!-- Section_backgraund (полосочки на всё body)-->
-    <section>
-      <div class="section_backgraund">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </section>
-
+   
       <!-- NAVIGATION -->
         <nav class="navigation">
-          <div class="nav_header section_container">
-            <div class="nav_logo">
+          <div class="navigation__header container">
+            <div class="navigation__logo">
               <a href="#"><img src="./images/images-moto/logo.png" alt="logo"></a>
             </div>
             <input type="checkbox" id="menu-toggle-2"/>
-            <label for="menu-toggle-2" class="nav_menu_btn"><i class="ri-menu-4-line"></i></label>
-
-            <ul class="nav_links" id="nav-links">
+            <label for="menu-toggle-2" class="navigation__menu_btn"><i class="ri-menu-4-line"></i></label>
+            <ul class="navigation__links" id="nav-links">
               <li><a href="#home">Home</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#deals">Motorcycles</a></li>
@@ -61,9 +48,11 @@
           </div>
         </nav>
 
+
+         <main class="main-content">
       <!-- HEADER -->
       <header class="header" id="home">
-        <div class="header_container section_container">
+               <div class="header_container container">
           <div class="header-back">
               <h1 class="section_header">Book Your Perfect
                 <span class="hero-line">
@@ -80,11 +69,20 @@
             </form>
           </div>
           </div>
+              </div>
+              <video autoplay muted loop preload="auto" class="fullscreen_video">
+                <!-- <source src="./video/1.webm" type="video/webm"> -->
+                <source src="./video/1.mp4" type="video/mp4">
+              </video> 
     </header>
+
+     <!-- banner_under_section- -->
+      <section class="banner_under_section"></section>
      
    
        <!-- SECTION HOW IT WORK -->
-    <section class="section_container about_container" id="about">
+    <section class="about" id="about">
+      <div class="about_container container">
       <p class="section_subheader">How it work </p>
       <h2 class="section_header">Renting a motorcycles with us is simple!</h2>
       <div class="about_grid">
@@ -105,23 +103,21 @@
         </div>
         <div class="about_card">
           <span><i class="ri-compass-3-fill"></i></span>
-          <h4>Enjoy your journey</h4>
+          <h4>Enjoy journey</h4>
             <p>Pick up your motorcycle and hit the road with confidence. Every vehicle is carefully maintained and inspected to ensure a safe, comfortable, and memorable riding experience.</p>
           </div>
         </div>
+         </div>
       </section>
 
 
-       <!-- banner_under_about -->
-      <section class="banner_under_about" id="home">
-        <div class="section_container banner_container">
-        </div>
-      </section>
-    </section>
+       <!-- banner_under_section- -->
+      <section class="banner_under_section"></section>
+  
 
 
      <!-- SECTION DEALS -->
-     <section class="section_container deals_container" id="deals">
+     <section class="deals_container container" id="deals">
          <p class="section_subheader text_animation"> Start your adventure the freedom</p>
          <h2 class="section_header ">Most popular motorcycles rental deals</h2>
        
@@ -137,10 +133,11 @@
            <label for="harley" class="btn">Harley</label>
         </div>
 
-
+        <!-- bmw_content -->
         <div id="BMW" class="tab_content bmw_content">
+        <!--bmw first -->
             <div class="deals_card">    
-                <img src="./images/images_deals/bmw/1.png" alt="">
+                <img src="./images/images_deals/bmw/1.png" alt="BMW G310R">
                 <div class="deals_reting">
                     <span><i class="ri-star-fill"></i></span>
                     <span><i class="ri-star-fill"></i></span>
@@ -162,9 +159,9 @@
                      <button type="button">Rent Now<span><i class="ri-arrow-right-circle-fill"></i></span></button>
                 </div>
                 </div>
-
+       <!--bmw second-->
                  <div class="deals_card">
-                 <img src="./images/images_deals/bmw/3.png" alt="">
+                 <img src="./images/images_deals/bmw/3.png" alt="BMW R1200R">
                 <div class="deals_reting">
                     <span><i class="ri-star-fill"></i></span>
                     <span><i class="ri-star-fill"></i></span>
@@ -186,10 +183,9 @@
                      <a href="#">Rent Now<span><i class="ri-arrow-right-circle-fill"></i></span></a>
                 </div>
                 </div>
-
-
+       <!--bmw third -->
                  <div class="deals_card">
-                 <img src="./images/images_deals/bmw/4.png" alt="">
+                 <img src="./images/images_deals/bmw/4.png" alt="BMW S1000RR">
                 <div class="deals_reting">
                     <span><i class="ri-star-fill"></i></span>
                     <span><i class="ri-star-fill"></i></span>
@@ -210,40 +206,13 @@
                     <h3>$140<span>/Per Day</span></h3>
                      <a href="#">Rent Now<span><i class="ri-arrow-right-circle-fill"></i></span></a>
                 </div>
-                </div>
-
-
-                 <div class="deals_card">
-                 <img src="./images/images_deals/bmw/2.png" alt="">
-                <div class="deals_reting">
-                    <span><i class="ri-star-fill"></i></span>
-                    <span><i class="ri-star-fill"></i></span>
-                    <span><i class="ri-star-fill"></i></span>
-                    <span><i class="ri-star-fill"></i></span>
-                    <span><i class="ri-star-line"></i></span>
-                    <span>(340)</span>
-                </div>
-                <h4>BMW K1300S</h4>
-                 <ul class="deals_card_grid">
-                    <li><span><i class="ri-group-line"></i></span>2 People</li>
-                    <li><span><i class="ri-steering-2-line"></i></span>Auto</li>
-                    <li><span><i class="ri-speed-up-line"></i></span> 400km</li>
-                    <li><span><i class="ri-motorbike-fill"></i></span>Electric</li>
-                </ul>
-                <hr>
-                <div class="deals_card_footer">
-                    <h3>$150<span>/Per Day</span></h3>
-                     <a href="#">Rent Now<span><i class="ri-arrow-right-circle-fill"></i></span></a>
-                </div>
-                </div>
-
-             
+                </div> 
         </div>
-
-
+    <!-- yamaha_content -->
         <div id="Yamaha" class="tab_content yamaha_content">
+     <!--yamaha_first -->
             <div class="deals_card">
-                <img src="./images/images_deals/yamaha/1.png" alt="">
+                <img src="./images/images_deals/yamaha/1.png" alt="Yamaha YZFR15">
                 <div class="deals_reting">
                     <span><i class="ri-star-fill"></i></span>
                     <span><i class="ri-star-fill"></i></span>
@@ -265,9 +234,9 @@
                      <a href="#">Rent Now<span><i class="ri-arrow-right-circle-fill"></i></span></a>
                 </div>
                 </div>
-
+      <!-- yamaha_second  -->
                  <div class="deals_card">
-                <img src="./images/images_deals/yamaha/2.png" alt="">
+                <img src="./images/images_deals/yamaha/2.png" alt="Yamaha FZ09">
                 <div class="deals_reting">
                     <span><i class="ri-star-fill"></i></span>
                     <span><i class="ri-star-fill"></i></span>
@@ -289,10 +258,9 @@
                      <a href="#">Rent Now<span><i class="ri-arrow-right-circle-fill"></i></span></a>
                 </div>
                 </div>
-
-
+    <!-- Yamaha third -->
                  <div class="deals_card">
-               <img src="./images/images_deals/yamaha/3.png" alt="">
+               <img src="./images/images_deals/yamaha/3.png" alt="Yamaha Tracer 900">
                 <div class="deals_reting">
                     <span><i class="ri-star-fill"></i></span>
                     <span><i class="ri-star-fill"></i></span>
@@ -313,38 +281,13 @@
                     <h3>$140<span>/Per Day</span></h3>
                      <a href="#">Rent Now<span><i class="ri-arrow-right-circle-fill"></i></span></a>
                 </div>
-                </div>
-
-
-                 <div class="deals_card">
-                <img src="./images/images_deals/yamaha/4.png" alt="">
-                <div class="deals_reting">
-                    <span><i class="ri-star-fill"></i></span>
-                    <span><i class="ri-star-fill"></i></span>
-                    <span><i class="ri-star-fill"></i></span>
-                    <span><i class="ri-star-fill"></i></span>
-                    <span><i class="ri-star-line"></i></span>
-                    <span>(350)</span>
-                </div>
-                <h4>Yamaha XT1200Z</h4>
-                 <ul class="deals_card_grid">
-                    <li><span><i class="ri-group-line"></i></span>2 People</li>
-                    <li><span><i class="ri-steering-2-line"></i></span>Auto</li>
-                    <li><span><i class="ri-speed-up-line"></i></span> 400km</li>
-                    <li><span><i class="ri-motorbike-fill"></i></span>Electric</li>
-                </ul>
-                <hr>
-                <div class="deals_card_footer">
-                    <h3>$150<span>/Per Day</span></h3>
-                     <a href="#">Rent Now<span><i class="ri-arrow-right-circle-fill"></i></span></a>
-                </div>
-                </div>
+                </div>     
         </div>
-
-        
+      <!-- honda_content -->
         <div id="Honda" class="tab_content honda_content">
+      <!-- honda_first -->
             <div class="deals_card">
-                <img src="./images/images_deals/honda/1.png" alt="">
+                <img src="./images/images_deals/honda/1.png" alt="Honda CB600F">
                 <div class="deals_reting">
                     <span><i class="ri-star-fill"></i></span>
                     <span><i class="ri-star-fill"></i></span>
@@ -366,9 +309,9 @@
                      <a href="#">Rent Now<span><i class="ri-arrow-right-circle-fill"></i></span></a>
                 </div>
                 </div>
-
+      <!-- Honda second -->
                  <div class="deals_card">
-                 <img src="./images/images_deals/honda/2.png" alt="">
+                 <img src="./images/images_deals/honda/2.png" alt="Honda CB500">
                 <div class="deals_reting">
                     <span><i class="ri-star-fill"></i></span>
                     <span><i class="ri-star-fill"></i></span>
@@ -390,10 +333,9 @@
                      <a href="#">Rent Now<span><i class="ri-arrow-right-circle-fill"></i></span></a>
                 </div>
                 </div>
-
-
+       <!-- Honda third -->
                  <div class="deals_card">
-                 <img src="./images/images_deals/honda/3.png" alt="">
+                 <img src="./images/images_deals/honda/3.png" alt="Honda Africa Twin">
                 <div class="deals_reting">
                     <span><i class="ri-star-fill"></i></span>
                     <span><i class="ri-star-fill"></i></span>
@@ -414,38 +356,13 @@
                     <h3>$130<span>/Per Day</span></h3>
                      <a href="#">Rent Now<span><i class="ri-arrow-right-circle-fill"></i></span></a>
                 </div>
-                </div>
-
-
-                 <div class="deals_card">
-                 <img src="./images/images_deals/honda/4.png" alt="">
-                <div class="deals_reting">
-                    <span><i class="ri-star-fill"></i></span>
-                    <span><i class="ri-star-fill"></i></span>
-                    <span><i class="ri-star-fill"></i></span>
-                    <span><i class="ri-star-fill"></i></span>
-                    <span><i class="ri-star-line"></i></span>
-                    <span>(233)</span>
-                </div>
-                <h4>Honda Gold Wing</h4>
-                 <ul class="deals_card_grid">
-                    <li><span><i class="ri-group-line"></i></span>2 People</li>
-                    <li><span><i class="ri-steering-2-line"></i></span>Auto</li>
-                    <li><span><i class="ri-speed-up-line"></i></span> 400km</li>
-                    <li><span><i class="ri-motorbike-fill"></i></span>Electric</li>
-                </ul>
-                <hr>
-                <div class="deals_card_footer">
-                    <h3>$125<span>/Per Day</span></h3>
-                     <a href="#">Rent Now<span><i class="ri-arrow-right-circle-fill"></i></span></a>
-                </div>
-                </div>
+                </div>      
         </div>
-
-
+    <!-- harley_content -->
          <div id="Harley" class="tab_content harley_content">
+    <!-- harley_first -->
             <div class="deals_card">
-                <img src="./images/images_deals/harley/1.png" alt="">
+                <img src="./images/images_deals/harley/1.png" alt="Harley-Davidson VRSC">
                 <div class="deals_reting">
                     <span><i class="ri-star-fill"></i></span>
                     <span><i class="ri-star-fill"></i></span>
@@ -467,9 +384,9 @@
                      <a href="#">Rent Now<span><i class="ri-arrow-right-circle-fill"></i></span></a>
                 </div>
                 </div>
-
+       <!-- harley_second -->
                  <div class="deals_card">
-                <img src="./images/images_deals/harley/2.png" alt="">
+                <img src="./images/images_deals/harley/2.png" alt="Harley-Davidson Street Glide">
                 <div class="deals_reting">
                     <span><i class="ri-star-fill"></i></span>
                     <span><i class="ri-star-fill"></i></span>
@@ -491,10 +408,9 @@
                      <a href="#">Rent Now<span><i class="ri-arrow-right-circle-fill"></i></span></a>
                 </div>
                 </div>
-
-
+       <!-- harley_third -->
                  <div class="deals_card">
-                <img src="./images/images_deals/harley/3.png" alt="">
+                <img src="./images/images_deals/harley/3.png" alt="Tesla Model S">
                 <div class="deals_reting">
                     <span><i class="ri-star-fill"></i></span>
                     <span><i class="ri-star-fill"></i></span>
@@ -516,47 +432,17 @@
                      <a href="#">Rent Now<span><i class="ri-arrow-right-circle-fill"></i></span></a>
                 </div>
                 </div>
-
-
-                 <div class="deals_card">
-                <img src="./images/images_deals/harley/4.png" alt="">
-                <div class="deals_reting">
-                    <span><i class="ri-star-fill"></i></span>
-                    <span><i class="ri-star-fill"></i></span>
-                    <span><i class="ri-star-fill"></i></span>
-                    <span><i class="ri-star-fill"></i></span>
-                    <span><i class="ri-star-line"></i></span>
-                    <span>(470)</span>
-                </div>
-                <h4>Harley-Davidson CVO Touring </h4>
-                <ul class="deals_card_grid">
-                    <li><span><i class="ri-group-line"></i></span>2 People</li>
-                    <li><span><i class="ri-steering-2-line"></i></span>Auto</li>
-                    <li><span><i class="ri-speed-up-line"></i></span> 400km</li>
-                    <li><span><i class="ri-motorbike-fill"></i></span>Electric</li>
-                </ul>
-                <hr>
-                <div class="deals_card_footer">
-                    <h3>$150<span>/Per Day</span></h3>
-                     <a href="#">Rent Now<span><i class="ri-arrow-right-circle-fill"></i></span></a>
-                </div>
-                </div>
         </div>
      </section>
 
 
-  
-     <!-- banner__near_deals- -->
-      <section class="banner__near_deals">
-        <div class="section_container">
-        </div>
-      </section>
-
+     <!-- banner_under_section- -->
+      <section class="banner_under_section"></section>
 
 
         <!-- Section banner-location -->
       <section class="banner_location">
-        <div class="section_container banner_container">
+        <div class="banner_container container">
           <div class="map_header">
             <div class="map_title">
               <h2 class="section_header"> Choose a rental location near you</h2>
@@ -594,24 +480,16 @@
     </section>
 
 
-    
-       <!-- banner five  -->
-      <section class="header_f" id="home">
-        <div class="section_container banner_container">
-        </div>
-      </section>
-    </section>
+       <!-- banner_under_section- -->
+      <section class="banner_under_section"></section>
+   
 
-     
-
-    <section class="section_container reviews_container" id="reviews">
+    <section class="reviews_container container" id="reviews">
   <div class="reviews_heading">
     <p class="section_subheader text_animation">EIGHTYEIGHT REVIEWS</p>
     <h2 class="section_header">WHAT PEOPLE SAY ABOUT US?</h2>
   </div>
-
   <ul class="reviews_grid">
-
     <li class="hex">
       <img src="./images/images-reviews/1.png" alt="review" />
       <div class="content">
@@ -711,127 +589,186 @@
       </div>
     </li>
 
+    <li class="hex">
+      <img src="./images/images-reviews/6.png" alt="review" />
+      <div class="content">
+        <div class="stars">
+          <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+        </div>
+        <h4>Chris Taylor</h4>
+        <p>I will definitely rent again.</p>
+      </div>
+    </li>
+
+    <li class="hex">
+      <img src="./images/images-reviews/2.png" alt="review" />
+      <div class="content">
+        <div class="stars">
+          <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+        </div>
+        <h4>Chris Taylor</h4>
+        <p>I will definitely rent again.</p>
+      </div>
+    </li>
+
   </ul>
 </section>
        
 
-        <!-- header id="home"  -->
-      <section class="banner_under_follow" id="home">
-        <div class="section_container banner_container">
-        </div>
-      </section>
-    </section>
-
-
-
-
-
+    <!-- banner_under_section- -->
+      <section class="banner_under_section"></section>
 
 
  <!-- FOLLOW US ON -->
-    <section class="section_container instagram_container" id="follow">
+    <section class="instagram_container container" id="follow">
           <div class="instagram_header">
-            <p class="section_subheader text_animation">Follow us on</p>
-            <h2 class="section_header">
-              <a href="https://instagram.com/youraccount">Instagram</a>
-            </h2>
+            <span class="section_subheader ">Follow us on</span>
+              <a class="section_header" href="https://instagram.com/youraccount">Instagram</a>
           </div>
-          
-     
-            
        <div class="slider">
         <div class="list">
           <div class="item" style="--position: 1">
-            <img src="./images/images-moto/1.png" alt="" />
+            <img src="./images/images-moto/1.png" alt="images-moto" />
           </div>
           <div class="item" style="--position: 2">
-            <img src="./images/images-moto/8.png" alt="" />
+            <img src="./images/images-moto/8.png" alt="images-moto" />
           </div>
           <div class="item" style="--position: 3">
-            <img src="../images/images-moto/16.png" alt="" />
+            <img src="../images/images-moto/16.png" alt="images-moto" />
           </div>
           <div class="item" style="--position: 4">
-            <img src="./images/images-moto/3.png" alt="" />
+            <img src="./images/images-moto/3.png" alt="images-moto" />
           </div>
           <div class="item" style="--position: 5">
-            <img src="./images/images-moto/5.png" alt="" />
+            <img src="./images/images-moto/5.png" alt="images-moto" />
           </div>
           <div class="item" style="--position: 6">
-            <img src="./images/images-moto/6.png" alt="" />
+            <img src="./images/images-moto/6.png" alt="images-moto" />
           </div>
           <div class="item" style="--position: 7">
-            <img src="./images/images-moto/2.png" alt="" />
+            <img src="./images/images-moto/2.png" alt="images-moto" />
           </div>
           <div class="item" style="--position: 8">
-            <img src="./images/images-moto/13.png" alt="" />
+            <img src="./images/images-moto/13.png" alt="images-moto" />
           </div>
           <div class="item" style="--position: 9">
-            <img src="./images/images-moto/8.png" alt="" />
+            <img src="./images/images-moto/8.png" alt="images-moto" />
           </div>
           <div class="item" style="--position: 10">
-            <img src="./images/images-moto/1.png" alt="" />
+            <img src="./images/images-moto/1.png" alt="images-moto" />
           </div>
-  
+           <div class="item" style="--position: 1">
+            <img src="./images/images-moto/1.png" alt="images-moto" />
+          </div>
+          <div class="item" style="--position: 2">
+            <img src="./images/images-moto/8.png" alt="images-moto" />
+          </div>
+          <div class="item" style="--position: 3">
+            <img src="../images/images-moto/16.png" alt="images-moto" />
+          </div>
+          <div class="item" style="--position: 4">
+            <img src="./images/images-moto/3.png" alt="images-moto" />
+          </div>
+          <div class="item" style="--position: 5">
+            <img src="./images/images-moto/5.png" alt="images-moto" />
+          </div>
+          <div class="item" style="--position: 6">
+            <img src="./images/images-moto/6.png" alt="images-moto" />
+          </div>
+          <div class="item" style="--position: 7">
+            <img src="./images/images-moto/2.png" alt="images-moto" />
+          </div>
+          <div class="item" style="--position: 8">
+            <img src="./images/images-moto/13.png" alt="images-moto" />
+          </div>
+          <div class="item" style="--position: 9">
+            <img src="./images/images-moto/8.png" alt="images-moto" />
+          </div>
+          <div class="item" style="--position: 10">
+            <img src="./images/images-moto/1.png" alt="images-moto" />
+          </div>
         </div>
       </div>
-
-      <div class="slider slider-second" reverse="true">
+      <div class="slider">
         <div class="list">
           <div class="item" style="--position: 1">
-            <img src="./images/images-moto/20.png" alt="" />
+            <img src="./images/images-moto/20.png" alt="images-moto" />
           </div>
           <div class="item" style="--position: 2">
-            <img src="./images/images-moto/25.png" alt="" />
+            <img src="./images/images-moto/25.png" alt="images-moto" />
           </div>
           <div class="item" style="--position: 3">
-            <img src="./images/images-moto/17.png" alt="" />
+            <img src="./images/images-moto/17.png" alt="images-moto" />
           </div>
           <div class="item" style="--position: 4">
-            <img src="./images/images-moto/23.png" alt="" />
+            <img src="./images/images-moto/23.png" alt="images-moto" />
           </div>
           <div class="item" style="--position: 5">
-            <img src="./images/images-moto/14.png" alt="" />
+            <img src="./images/images-moto/14.png" alt="images-moto" />
           </div>
           <div class="item" style="--position: 6">
-            <img src="./images/images-moto/26.png" alt="" />
+            <img src="./images/images-moto/26.png" alt="images-moto" />
           </div>
           <div class="item" style="--position: 7">
-            <img src="./images/images-moto/9.png" alt="" />
+            <img src="./images/images-moto/9.png" alt="images-moto" />
           </div>
           <div class="item" style="--position: 8">
-            <img src="./images/images-moto/27.png" alt="" />
+            <img src="./images/images-moto/27.png" alt="images-moto" />
           </div>
           <div class="item" style="--position: 9">
-            <img src="./images/images-moto/22.png" alt="" />
+            <img src="./images/images-moto/22.png" alt="images-moto" />
           </div>
           <div class="item" style="--position: 10">
-            <img src="./images/images-moto/27.png" alt="" />
+            <img src="./images/images-moto/27.png" alt="images-moto" />
+          </div>
+           <div class="item" style="--position: 1">
+            <img src="./images/images-moto/20.png" alt="images-moto" />
+          </div>
+          <div class="item" style="--position: 2">
+            <img src="./images/images-moto/25.png" alt="images-moto" />
+          </div>
+          <div class="item" style="--position: 3">
+            <img src="./images/images-moto/17.png" alt="images-moto" />
+          </div>
+          <div class="item" style="--position: 4">
+            <img src="./images/images-moto/23.png" alt="images-moto" />
+          </div>
+          <div class="item" style="--position: 5">
+            <img src="./images/images-moto/14.png" alt="images-moto" />
+          </div>
+          <div class="item" style="--position: 6">
+            <img src="./images/images-moto/26.png" alt="images-moto" />
+          </div>
+          <div class="item" style="--position: 7">
+            <img src="./images/images-moto/9.png" alt="images-moto" />
+          </div>
+          <div class="item" style="--position: 8">
+            <img src="./images/images-moto/27.png" alt="images-moto" />
+          </div>
+          <div class="item" style="--position: 9">
+            <img src="./images/images-moto/22.png" alt="images-moto" />
+          </div>
+          <div class="item" style="--position: 10">
+            <img src="./images/images-moto/27.png" alt="images-moto" />
           </div>
         </div>
       </div>
        </section>
+        
 
+   <!-- banner_under_section- -->
+      <section class="banner_under_section"><div></div></section>
 
-
-    <!-- Section banner-near-footer  -->
-    <section class="banner-near-footer ">
-      <div class="section_container banner_container">
- <p class="section_subheader text_animation">Your adventure awaits</p>
-        <h2 class="section_header">Let's make your next ride unforgettable</h2>
-      </div>
-       
-    </section>
-
+  
     <!--footer  -->
-    <footer>
-      <div class="section_container footer_container" id="contact">
+    <footer class="footer">
+      <div class="footer_container container" id="contact">
         <div class="footer_col">
           <a href="" class="footer_logo">
             <img src="./images/images-moto/logo.png" alt="logo" />
           </a>
           <p class="section_description">
-            We offer a wide range of new and used cars with the best deals and
-            trusted service.
+            Explore the freedom of the open road with our reliable motorcycles and exceptional customer service.
           </p>
           <ul class="footer_socials">
             <li><a href=""><i class="ri-facebook-circle-fill"></i></a></li>
@@ -839,7 +776,7 @@
             <li><a href=""><i class="ri-youtube-fill"></i></a></li>
           </ul>
         </div>
-        <div class="footer_col">
+        <div class="footer_col footer_col-center">
           <h4>QVICKLINCS</h4>
           <ul class="footer_links">
             <li><a href="#">HOME</a></li>
@@ -858,9 +795,10 @@
         </div>
       </div>
       <div class="footer_bar">
-        Copyright 2026 Nataliia Bybyk. All rights reserved
+         &copy; 2026 MotoRent. Designed & Developed by Nataliia Bybyk. All rights reserved.
       </div>
     </footer>
+     </main>
 
 
   </body>

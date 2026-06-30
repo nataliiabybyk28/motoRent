@@ -1,13 +1,15 @@
-@use "../../variables/index" as *;
-@use "../../base/index" as *;
-@use "../../layout/index.scss" as *;
+@use "../variables/index" as *;
+@use "../base/index" as *;
 
 .about_container {
   width: 100%;
   position: relative;
-  overflow: hidden;
-  background: $background-color;
   padding: 2rem;
+  overflow: hidden;
+  background: $backgraund-third;
+  border: $border-outside;
+  border-radius: $border-radius-lg;
+  z-index: 2;
 }
 
 .about_container::before {
@@ -45,17 +47,16 @@
   margin-inline: auto;
   text-align: center;
   padding: 2rem 1.2rem;
-  border-radius: 2rem;
+  border-radius: $border-radius-lg;
   background: $background-second;
-  border: 1px solid rgba(168, 105, 4, 0.3);
-  color: $extra-light;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  border: $border-card;
+  box-shadow: $shadow-card;
   overflow: hidden;
-  transition: all 0.35s ease;
+  transition: $transition-duration;
 }
 
 .about_card:hover {
-  box-shadow: 0px 2px 20px rgba(70, 36, 2, 0.747);
+  box-shadow: $shadow-card-hover;
   border-color: $gold-main;
   transform: translateY(-14px) scale(1.03);
 }
@@ -83,13 +84,12 @@
 
 .about_card span {
   display: inline-block;
-  color: $golden;
-  background-color: #f3f4f6;
+  color: $gold-main;
+  background-color: $text-main;
   margin-bottom: 1rem;
   font-size: 2.5rem;
   padding: 0.7rem 1.2rem;
-  border-radius: 1.25rem;
-  background: rgb(231, 221, 221);
+  border-radius: $border-radius-md;
   backdrop-filter: blur(10px);
 }
 
@@ -97,11 +97,10 @@
   margin-bottom: 1rem;
   font-size: 1.3rem;
   font-weight: 700;
-  color: $goldenrod;
+  color: $gold-bright;
   text-transform: uppercase;
 }
 
 .about_card p {
   line-height: 1.5rem;
-  font-size: 1rem;
 }

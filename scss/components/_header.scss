@@ -1,40 +1,20 @@
-@use "../../variables/index" as *;
-@use "../..//base/index" as *;
-@use "../../layout/index" as *;
+@use "../variables/index" as *;
+@use "../base/index" as *;
 
 .header {
   min-height: 100vh;
   position: relative;
-  background: url(../images/images-moto/32.png) center / cover no-repeat fixed;
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
   z-index: 1;
   display: flex;
 }
 
-.header::before {
-  position: absolute;
-  content: "";
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  background-image: linear-gradient(
-    to bottom,
-    $background-color,
-    rgba(0, 0, 0, 0.1),
-    $background-color
-  );
-  z-index: -1;
-}
-
 .header_container {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
+  z-index: 2;
 }
 
 .header_container .section_header {
@@ -73,13 +53,10 @@
   align-items: center;
   width: 100%;
   padding: 1rem 1rem 4rem;
-  background: linear-gradient(
-    to right,
-    rgba(12, 12, 12, 0.4),
-    rgba(12, 12, 12, 0.4)
-  );
-  backdrop-filter: blur(4px);
-  border-radius: 24px;
+  background: $backgraund-glass-light;
+  backdrop-filter: blur(15px);
+  border-radius: $border-radius-lg;
+  border: $border-outside;
 }
 
 .header_container .section_subheader {
@@ -113,12 +90,12 @@
   border-radius: 100px;
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(168, 105, 4, 0.4);
-  box-shadow: 0 0 30px rgba(168, 105, 4, 0.2);
+  border: $border-card;
+  box-shadow: $shadow-card;
 }
 
 .newsletter_form:hover {
-  border: 1px solid $gold-main;
+  border: $border-outside;
 }
 
 .newsletter_form input {
@@ -128,12 +105,12 @@
   outline: none;
   background: transparent;
   padding: 1rem 1.5rem;
-  color: $white;
+  color: $text-main;
   font-size: 0.9rem;
 }
 
 .newsletter_form input::placeholder {
-  color: rgba(255, 255, 255, 0.6);
+  color: $text-light;
 }
 
 .newsletter_form button {
@@ -142,10 +119,10 @@
   border: none;
   border-radius: 50%;
   cursor: pointer;
-  color: $white;
+  color: $text-main;
   font-size: 1.3rem;
-  background: linear-gradient(135deg, $golden, darkgoldenrod);
-  transition: all 0.3s ease;
+  background: $gold-main;
+  transition: $transition-duration;
 }
 
 .newsletter_form button:hover {
@@ -213,7 +190,6 @@
   .newsletter_form button {
     width: 50px;
     height: 50px;
-    font-size: 1rem;
   }
 }
 
@@ -230,13 +206,8 @@
     font-size: 3.5rem;
   }
 
-  .header_container .section_header {
-    line-height: 1.5;
-  }
-
   .newsletter h3 {
     margin: 0rem auto 0.5rem;
     letter-spacing: 0;
-    font-size: 1rem;
   }
 }

@@ -2,17 +2,39 @@
 @use "../base/index" as *;
 
 .section_description {
-  color: $white;
   line-height: 1.2rem;
+  font-size: 0.85rem;
+  z-index: 2;
+  font-family: $font-heading;
+}
+
+.footer {
+  z-index: 2;
+  position: relative;
+  background: $background-color;
+  background: $backgraund-glass-dark;
+  backdrop-filter: blur(15px);
+  margin-top: auto;
+  border-top: $border-outside;
 }
 
 .footer_container {
+  position: relative;
   display: grid;
   gap: 4rem 2rem;
+  z-index: 2;
+  padding: 2rem;
+}
+
+.footer_col-center {
+  display: grid;
+  justify-content: center;
 }
 
 .footer_logo {
   display: inline-flex;
+  width: 100%;
+  max-width: 180px;
   margin-bottom: 2rem;
 }
 
@@ -29,20 +51,19 @@
 
 .footer_socials a {
   display: inline-flex;
-  padding: 5px 6px;
+  padding: 5px;
   font-size: 1.5rem;
-  color: $white;
-  border: 2px solid $white;
-  border-radius: 100%;
+  border: 2px solid $text-main;
+  border-radius: 50%;
 }
 
 .footer_socials a:hover {
-  border-color: $primary;
+  border-color: $gold-bright;
 }
 
 .footer_col h4 {
   margin-bottom: 2rem;
-  font-size: 1rem;
+  font-size: 0.85rem;
   font-weight: 500;
   color: $text-light;
   letter-spacing: 2px;
@@ -54,21 +75,21 @@
 }
 
 .footer_links a {
-  font-size: 1rem;
+  font-size: 0.85rem;
   font-weight: 500;
-  color: $white;
+  color: $text-main;
   letter-spacing: 2px;
 }
 
 .footer_links a:hover {
-  color: $primary;
+  color: $gold-bright;
 }
 
 .footer_col form {
   width: 100%;
   display: flex;
   align-items: center;
-  border: 2px solid $primary;
+  border: $border-outside;
 }
 
 .footer_col input {
@@ -76,12 +97,12 @@
   padding-inline: 1rem;
   outline: none;
   border: none;
-  color: $white;
+  color: $text-main;
   background-color: transparent;
 }
 
 .footer_col input::placeholder {
-  color: $white;
+  color: $text-light;
 }
 
 .footer_col form .btn {
@@ -91,15 +112,14 @@
 }
 
 .footer_col form .btn:hover {
-  color: $primary;
+  color: $gold-bright;
 }
 
 .footer_bar {
   padding: 1.5rem 1rem;
-  font-size: 1rem;
-  color: $white;
+  font-size: 0.85rem;
   text-align: center;
-  background-color: #1f1b1c;
+  background-color: $background-footer-bar;
 }
 
 @media screen and (min-width: 540px) {

@@ -1,0 +1,13 @@
+@use "../../base/index" as *;
+@use "../../variables/index" as *;
+
+@keyframes ripple {
+  0% {
+    transform: scale(0.6);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}

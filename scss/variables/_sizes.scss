@@ -1,1 +1,17 @@
-$max-width: 1200px;
+@use "./colors" as *;
+
+$max-width: 1240px;
+
+$border-outside: 1px solid $gold-bright;
+$border-card: 1px solid $color-border-card;
+
+$border-radius-sm: 0.5rem;
+$border-radius-md: 1rem;
+$border-radius-lg: 1.5rem;
+
+$shadow-button: 0px 2px 20px $gold-main;
+$shadow-card: 0 10px 30px $color-shadow-card;
+$shadow-card-hover: 0px 2px 20px $color-shadow-card-hover;
+$shadow-location-pin: 0 0 20px $color-shadow-location-pin;
+
+$transition-duration: all 0.3s ease;
